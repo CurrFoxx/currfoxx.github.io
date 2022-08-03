@@ -1,0 +1,100 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(60, 128, 63);
+}
+
+
+
+ol li {
+    clear: both;
+    padding: 14px 60px 0 0;
+}
+
+ol li span:first-child {
+  float: left;
+  padding: 0 .4em 0 0;
+  margin: 0;
+}
+ol li span + span {
+  float: right;
+  padding: 0 0 0 .4em;
+  margin: 0;
+}
+
+ol li:after {
+  content: "";
+  display: block;
+  overflow: hidden;
+  height: 1em;
+  border-bottom: 1px dotted;
+}
+
+.block-1 {
+    width: 30vw;
+    height: 90vh;
+    background-color: #000;
+    border-radius: 25px;
+    margin: 0 auto;
+
+    animation: first 2s, 1s second 2s linear;
+}
+
+.content {
+    color: #fff;
+    animation: 4s ease-in 0s third, 1s ease-in  3s fourth;
+}
+
+.title {
+    font-size: 48px;
+    text-align: center;
+}
+
+/* Animation block-1 */
+
+@keyframes first {
+    from {
+      height: 1vh;
+      width: 15vw;
+    }
+    to {
+      height: 90vh;
+      width: 15vw;
+    }
+}
+
+@keyframes second {
+    from {
+      width: 15vw;
+    }
+    to {
+      width: 30vw;
+    }
+}
+
+/* Animation content */
+
+@keyframes third {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0;
+    }
+}
+@keyframes fourth {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
