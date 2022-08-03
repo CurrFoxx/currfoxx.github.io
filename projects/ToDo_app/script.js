@@ -12,6 +12,10 @@ const sleep = ms => {
     })
 }
 
+function uid() {
+    return (performance.now().toString(36) + Math.random().toString(36)).replace(/\./g, "");
+};
+
 function saveTasks() {
     localStorage.clear();
     localStorage.setItem(0, JSON.stringify(taskList.innerHTML));
@@ -54,11 +58,12 @@ addButton.addEventListener('click', () => {
     if (!task_data) {
         alert('Поле не заполнено!');
     } else {
+        let u_id = uid();
         let elem_task = document.createElement('div');
         elem_task.className = "item";
         elem_task.innerHTML = `<div class="item-left">
-                                    <input type="checkbox" class="item__check" id="item__check_id" name="item__check_name" value="0">
-                                    <Label for="item__check_id">${task_data}</Label>
+                                    <input type="checkbox" class="item__check" id="item__check_id_${u_id}" name="item__check_name" value="0">
+                                    <Label for="item__check_id_${u_id}">${task_data}</Label>
                                 </div>
                                 <div class="item-right">
                                     <button class="item__delete-button" id="delete-button_id">
