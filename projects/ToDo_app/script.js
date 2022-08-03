@@ -67,7 +67,8 @@ addButton.addEventListener('click', () => {
                                 </div>`;
         taskList.append(elem_task);
         saveTasks();
-        addEventCheckBox()
+        addEventCheckBox();
+        addEventDelButton();
         inputTask.value = '';
     }
 })
