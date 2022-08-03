@@ -63,7 +63,7 @@ addButton.addEventListener('click', () => {
         elem_task.className = "item";
         elem_task.innerHTML = `<div class="item-left">
                                     <input type="checkbox" class="item__check" id="item__check_id_${u_id}" name="item__check_name" value="0">
-                                    <Label for="item__check_id_${u_id}">${task_data}</Label>
+                                    <Label class="item__label" for="item__check_id_${u_id}">&nbsp;&nbsp;&nbsp;&nbsp;${task_data}</Label>
                                 </div>
                                 <div class="item-right">
                                     <button class="item__delete-button" id="delete-button_id">
@@ -96,3 +96,8 @@ nodes_checkBox.forEach(node => {
         node.checked = false;
     }
 })
+
+// Скрытие контента до полной загрузки страницы
+
+document.querySelector(".hideAll").style.display = "block";
+window.onload = function () { document.querySelector(".hideAll").style.display = "none"; }
