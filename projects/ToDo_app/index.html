@@ -15,21 +15,23 @@
 </head>
 
 <body>
-    <h1 class="todo-title">Список дел</h1>
-    <div class="todo-list">
-        <div class="todo-list__head">
-            <input type="text" class="todo-list__input-task" name="input-task_name" id="input-task_id"
-                placeholder="Задача...">
-            <button class="todo-list__add-button" id="add-button_id">
-                <div class="add-button__svg"></div>
-            </button>
-        </div>
-        <div class="todo-list__body">
-
+    <div class="toDo">
+        <h1 class="todo-title">Список дел</h1>
+        <div class="todo-list">
+            <div class="todo-list__head">
+                <input type="text" class="todo-list__input-task" name="input-task_name" id="input-task_id"
+                    placeholder="Введите задачу...">
+                <button class="todo-list__add-button" id="add-button_id">
+                    <div class="add-button__svg"></div>
+                </button>
+            </div>
+            <div class="todo-list__body">
+            </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <div style="display: none" class="hideAll"></div>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
