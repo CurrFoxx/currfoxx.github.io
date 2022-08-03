@@ -23,10 +23,16 @@ body {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
-    width: 100vw;
     margin: 0;
     min-width: 512px;
+}
+
+.toDo {
+    margin-bottom: 50px;
+}
+
+.todo-title {
+    text-align: right;
 }
 
 .todo-list {
@@ -82,7 +88,7 @@ body {
     margin: 0 auto;
 }
 
-/* Body */
+/* Item */
 
 .item {
     padding: 10px 0;
@@ -96,6 +102,13 @@ body {
 }
 .item:not(:first-child) {
     border-top: 1px solid var(--grey-lighten-1);
+}
+
+.item__label {
+    word-break: break-word;
+    padding: 0 5px 5px 13px;
+    float: inline-end;
+    width: 399px;
 }
 
 .item__delete-button {
@@ -125,3 +138,13 @@ body {
 .crossed-out_text {
     text-decoration: line-through;
 }
+
+.hideAll {
+   position: fixed;
+   left: 0px; 
+   right: 0px; 
+   top: 0px; 
+   bottom: 0px; 
+   background-color: white;
+   z-index: 99; /* Higher than anything else in the document */
+ }
