@@ -73,7 +73,7 @@ body {
 }
 
 .add-button__svg {
-    background-image: url('../images/svg/add-button.svg');
+    background-image: url('images/svg/add-button.svg');
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
@@ -104,7 +104,7 @@ body {
     border: transparent;
 }
 .delete-button__svg {
-    background-image: url('../images/svg/delete-button.svg');
+    background-image: url('images/svg/delete-button.svg');
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
