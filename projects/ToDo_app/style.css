@@ -24,7 +24,7 @@ body {
     align-items: center;
     flex-direction: column;
     margin: 0;
-    min-width: 512px;
+    
 }
 
 .toDo {
@@ -148,3 +148,23 @@ body {
    background-color: white;
    z-index: 99; /* Higher than anything else in the document */
  }
+
+ /* Media */
+
+ @media (max-width: 512px) {
+    .todo-list {
+        width: 360px;
+    }
+    .item__label {
+        width: 279px;
+    }
+}
+
+@media (max-width: 380px) {
+    .todo-list {
+        width: 300px;
+    }
+    .item__label {
+        width: 219px;
+    }
+}
