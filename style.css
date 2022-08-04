@@ -1,59 +1,58 @@
 *, *::before, *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #fff;
-    font-family: 'Open Sans', sans-serif;
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
 }
 
 a {
-    text-decoration: none;
-    color: rgb(60, 128, 63);
-}
-
-ol li {
-    clear: both;
-    padding: 14px 60px 0 0;
-}
-
-ol li span:first-child {
-  float: left;
-  padding: 0 .4em 0 0;
-  margin: 0;
-}
-ol li span + span {
-  float: right;
-  padding: 0 0 0 .4em;
-  margin: 0;
-}
-
-ol li:after {
-  content: "";
-  display: block;
-  overflow: hidden;
-  height: 1em;
-  border-bottom: 1px dotted;
+  text-decoration: none;
+  color: rgb(60, 128, 63);
 }
 
 .block-1 {
-    width: 600px;
-    height: 90vh;
-    background-color: #000;
-    border-radius: 25px;
-    margin: 0 auto;
+  width: 600px;
+  height: 90vh;
+  background-color: #000;
+  border-radius: 25px;
+  margin: 0 auto;
+  -webkit-box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow:    6px 6px 5px 0px rgba(0, 0, 0, 0.6);
+  box-shadow:         6px 6px 5px 0px rgba(0, 0, 0, 0.6);
 
-    animation: first 2s, 1s second 2s linear;
+  animation: first 2s, 1s second 2s linear;
 }
 
 .content {
-    color: #fff;
-    animation: 4s ease-in 0s third, 1s ease-in  3s fourth;
+  color: #fff;
+  animation: 4s ease-in 0s third, 1s ease-in  3s fourth;
 }
 
 .title {
-    font-size: 48px;
-    text-align: center;
+  font-size: 48px;
+  text-align: center;
+}
+
+.items {
+  padding: 0 20px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px 10px 5px;
+}
+
+.item:not(:last-child) {
+  border-bottom: 1px solid rgba(240, 240, 240, 0.7);
+}
+
+.item-name {
+  width: 40%;
 }
 
 /* Animation block-1 */
@@ -95,4 +94,48 @@ ol li:after {
     to {
         opacity: 1;
     }
+}
+
+/* Media */
+
+@media (max-width: 640px) {
+  .block-1 {
+    width: 360px;
+    height: 90vh;
+
+}
+
+  @keyframes second {
+    from {
+      width: 150px;
+    }
+    to {
+      width: 360px;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .block-1 {
+    width: 280px;
+    height: 90vh;
+}
+
+  .title {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .item {
+    font-size: 14px;
+  }
+
+  @keyframes second {
+    from {
+      width: 50px;
+    }
+    to {
+      width: 280px;
+    }
+  }
 }
