@@ -158,6 +158,10 @@ body {
     .item__label {
         width: 279px;
     }
+    .add-button__svg {
+        width: 26px;
+        height: 26px;
+    }
 }
 
 @media (max-width: 380px) {
@@ -166,5 +170,9 @@ body {
     }
     .item__label {
         width: 219px;
+    }
+    .add-button__svg {
+        width: 18px;
+        height: 18px;
     }
 }
