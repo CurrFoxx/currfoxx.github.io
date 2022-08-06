@@ -1,0 +1,125 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+    
+}
+
+.container {
+    width: 100%;
+    max-width: 94rem;
+    min-height: 95vh;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(212, 208, 203, 0.5);
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.content_block {
+    
+    flex: 1 0 auto;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    ". . content_block_title content_block_title content_block_title content_block_title"
+    "content_block_img content_block_img content_block_content content_block_content content_block_content content_block_content"
+    "content_block_img content_block_img content_block_content content_block_content content_block_content content_block_content";
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.content_block_img {
+    width: 100%;
+    grid-area: content_block_img;
+}
+
+.content_block_title {
+    width: 100%;
+    grid-area: content_block_title;
+}
+.content_block_content {
+    word-break: break-word;
+    margin-left: 5rem;
+    grid-area: content_block_content;
+}
+
+.header {
+    margin: 3rem 0;
+}
+
+.news_formDiv {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.form_newsAdd {
+    border: 0.1rem solid #000;
+}
+
+.form_newsAdd * {
+    margin: 0.3rem 0 0.3rem 0.3rem;
+}
+
+.news_title {
+    width:30rem;
+}
+
+.news_img {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+
+    .news_formDiv {
+        width: 90%;
+    }
+    .news_title {
+        width: 40%;
+    }
+    .news_content {
+        width: 98.5%;
+    }
+
+    .content_block {
+        margin-top: 3rem;
+
+        flex: 1 0 auto;
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 0.1fr 0.5fr 0.2fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+        "content_block_title"
+        "content_block_img"
+        "content_block_content";
+        word-wrap: break-word; 
+    }
+
+    .content_block:last-child {
+        margin-bottom: 5rem;
+    }
+
+    .content_block_img {
+        width: 80%;
+        grid-area: content_block_img;
+    }
+    .content_block_content {
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+    
+}
