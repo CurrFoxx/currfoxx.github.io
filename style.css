@@ -66,7 +66,7 @@ a {
 
 /* Animation block-1 */
 
-/* @keyframes first {
+@keyframes first {
     from {
       height: 1vh;
       width: 150px;
@@ -84,11 +84,11 @@ a {
     to {
       width: 600px;
     }
-} */
+}
 
 /* Animation content */
 
-/* @keyframes third {
+@keyframes third {
     from {
       opacity: 0;
     }
@@ -103,7 +103,7 @@ a {
     to {
         opacity: 1;
     }
-} */
+}
 
 /* Media */
 
